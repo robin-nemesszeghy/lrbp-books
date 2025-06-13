@@ -29,7 +29,7 @@ img {
   margin: 0 auto;
 }
 
-.purple {
+.red {
   color: #ab2d2d;
 }
 
@@ -124,4 +124,25 @@ button:active {
 
 .header__img--wraper {
   padding: 20px;
+}
+
+.container {
+  padding: 56px 0;
+}
+
+.row {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HIGHLIGHTS */
+
+.highlight__wrapper {
+  display: flex;
+}
+
+.highlight {
+  padding: 0 24px;
+  width: calc(100% / 3);
 }
