@@ -208,6 +208,7 @@ button:active {
 .header__img--wraper {
   padding: 20px;
   z-index: 2;
+  min-height: 100vh;
 }
 
 .container {
