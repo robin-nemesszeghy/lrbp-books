@@ -155,7 +155,7 @@ li {
 }
 
 header {
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
 }
 
 .header__container {
@@ -166,7 +166,7 @@ header {
   height: 100%;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around; */
+  justify-content: space-around;
 }
 
 .header__description {
@@ -208,7 +208,6 @@ button:active {
 .header__img--wraper {
   padding: 20px;
   z-index: 2;
-  min-height: 100vh;
 }
 
 .container {
