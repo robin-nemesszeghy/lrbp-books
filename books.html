@@ -92,25 +92,18 @@
       <section>
         <div class="container">
           <div class="row">
-            <h2 class="section__title books__header--title">
-              All <span class="red">Books</span>
-            </h2>
-            <div class="book">
-              <figure class="book__img--wrapper">
-                <img class="book__img" src="assets/bennys story.jpg" alt="" />
-              </figure>
-              <div class="book__title">Benny's Story</div>
-              <div class="book__ratings">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star-half-stroke"></i>
-              </div>
-              <div class="book__price">
-                <span class="book__price--normal">$21.99</span> $9.99
-              </div>
+            <div class="books__header">
+              <h2 class="section__title books__header--title">
+                All <span class="red">Books</span>
+              </h2>
+              <select id="filter" onchange="filterBooks(event)">
+                <option value="" disabled selected>Sort</option>
+                <option value="LOW_TO_HIGH">Price: Low to High</option>
+                <option value="HIGH_TO_LOW">Price: High to Low</option>
+                <option value="RATING">Rating</option>
+              </select>
             </div>
+            <div class="books"></div>
           </div>
         </div>
       </section>
