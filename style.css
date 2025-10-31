@@ -487,6 +487,10 @@ select {
 
 /* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
 @media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .header__description {
     padding: 0 24px;
   }
