@@ -28,10 +28,18 @@ async function renderBooks(filter) {
   const booksHtml = books
     .map((book) => {
       return `<div class="book">
-    <figure class="book__img--wrapper">
-      <img class="book__img" src="${book.url}" alt="" />
-    </figure>
-    <div class="book__title">${book.title}</div>
+    <a href="${book.url}" target="_blank">
+      <figure class="book__img--wrapper">
+        <img class="book__img" src="${book.image}" alt="" />
+      </figure>
+    </a>
+    <a
+      class="book__title--link"
+      href="${book.url}"
+      target="_blank"
+    >
+      <div class="book__title">${book.title}</div>
+    </a>
     <div class="book__ratings">${ratingsHtml(book.rating)}</div>
     <div class="book__price">
       ${priceHtml(book.originalPrice, book.salePrice)}
@@ -80,7 +88,8 @@ function getBooks() {
         {
           id: 1,
           title: "The Boathouse",
-          url: "assets/the boathouse.jpg",
+          image: "assets/the boathouse.jpg",
+          url: "https://mybook.to/TheBoathouse",
           originalPrice: 24.99,
           salePrice: 14.99,
           rating: 4.5,
@@ -88,7 +97,8 @@ function getBooks() {
         {
           id: 2,
           title: "The Boathouse (Second Edition)",
-          url: "assets/the boathouse second edition.jpg",
+          image: "assets/the boathouse second edition.jpg",
+          url: "https://mybook.to/TheBoathouseBook",
           originalPrice: 24.99,
           salePrice: 14.99,
           rating: 5,
@@ -96,7 +106,8 @@ function getBooks() {
         {
           id: 3,
           title: "Bad Blood CYOA Teaser Book",
-          url: "assets/bad blood cyoa.jpg",
+          image: "assets/bad blood cyoa.jpg",
+          url: "https://mybook.to/BadBloodCYOA",
           originalPrice: 21.99,
           salePrice: 9.99,
           rating: 5,
@@ -104,7 +115,8 @@ function getBooks() {
         {
           id: 4,
           title: "Benny's Story",
-          url: "assets/bennys story.jpg",
+          image: "assets/bennys story.jpg",
+          url: "https://mybook.to/BennyStory",
           originalPrice: 21.99,
           salePrice: 9.99,
           rating: 5,
@@ -112,7 +124,8 @@ function getBooks() {
         {
           id: 5,
           title: "Bad Blood",
-          url: "assets/bad blood.jpg",
+          image: "assets/bad blood.jpg",
+          url: "https://mybook.to/BadBloodAdventure",
           originalPrice: 24.99,
           salePrice: 14.99,
           rating: 5,
@@ -120,7 +133,8 @@ function getBooks() {
         {
           id: 6,
           title: "Killing Jar",
-          url: "assets/killing jar.jpg",
+          image: "assets/killing jar.jpg",
+          url: "https://mybook.to/KillingJar",
           originalPrice: 24.99,
           salePrice: 14.99,
           rating: 5,
@@ -128,7 +142,8 @@ function getBooks() {
         {
           id: 7,
           title: "Human Nature",
-          url: "assets/human nature.jpg",
+          image: "assets/human nature.jpg",
+          url: "https://mybook.to/HumanNatureAdventure",
           originalPrice: 24.99,
           salePrice: 14.99,
           rating: 5,
@@ -136,7 +151,8 @@ function getBooks() {
         {
           id: 8,
           title: "Dark Speculations (Volume 1)",
-          url: "assets/dark speculations.jpg",
+          image: "assets/dark speculations.jpg",
+          url: "https://mybook.to/DarkSpeculationsV1",
           originalPrice: 27.79,
           salePrice: 19.97,
           rating: 5,
@@ -144,7 +160,8 @@ function getBooks() {
         {
           id: 9,
           title: "Dark Speculations (Volume 2)",
-          url: "assets/dark speculations v2.jpg",
+          image: "assets/dark speculations v2.jpg",
+          url: "https://mybook.to/DarkSpeculationsV2",
           originalPrice: 27.79,
           salePrice: 0,
           rating: 4.5,
@@ -152,7 +169,8 @@ function getBooks() {
         {
           id: 10,
           title: "Convergence Point",
-          url: "assets/convergence point.jpg",
+          image: "assets/convergence point.jpg",
+          url: "https://mybook.to/ConvergencePoint",
           originalPrice: 25.99,
           salePrice: 15.99,
           rating: 4.5,
@@ -160,7 +178,8 @@ function getBooks() {
         {
           id: 11,
           title: "Shadows of Justice",
-          url: "assets/shadows of justice.jpg",
+          image: "assets/shadows of justice.jpg",
+          url: "https://mybook.to/ShadowsOfJustice",
           originalPrice: 25.99,
           salePrice: 15.99,
           rating: 5,
@@ -168,7 +187,8 @@ function getBooks() {
         {
           id: 12,
           title: "Fractured Code",
-          url: "assets/fractured code.jpg",
+          image: "assets/fractured code.jpg",
+          url: "https://mybook.to/FracturedCode",
           originalPrice: 25.99,
           salePrice: 15.99,
           rating: 5,
@@ -176,7 +196,8 @@ function getBooks() {
         {
           id: 13,
           title: "Shattered Realities",
-          url: "assets/shattered realities.jpg",
+          image: "assets/shattered realities.jpg",
+          url: "https://mybook.to/ShatteredRealities",
           originalPrice: 25.99,
           salePrice: 15.99,
           rating: 5,
@@ -184,7 +205,8 @@ function getBooks() {
         {
           id: 14,
           title: "Behind the Firewall",
-          url: "assets/behind the firewall.jpg",
+          image: "assets/behind the firewall.jpg",
+          url: "https://www.amazon.com/Behind-Firewall-Echo-Protocol-Book-ebook/dp/B0FR2N9GM5/",
           originalPrice: 19,
           salePrice: null,
           rating: 4,
@@ -192,7 +214,8 @@ function getBooks() {
         {
           id: 15,
           title: "Endgame Reboot",
-          url: "assets/behind the firewall.jpg",
+          image: "assets/behind the firewall.jpg",
+          url: "https://mybook.to/EchoProtocol",
           originalPrice: 16,
           salePrice: null,
           rating: 4.5,
